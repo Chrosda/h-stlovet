@@ -1,0 +1,5 @@
+import {action} from '@/lib/server';
+export async function POST(req:Request){
+ if(req.headers.get('origin')!==new URL(req.url).origin)return Response.json({error:'Ogiltigt ursprung'},{status:403});
+ try{const raw=await req.text();if(raw.length>12000)return new Response(null,{status:413});const result=await action(req,JSON.parse(raw));const headers:Record<string,string>={'Cache-Control':'no-store'};if(result.session){headers['Set-Cookie']=`hv_child=${result.session}; HttpOnly; Secure; SameSite=Strict; Path=/; Max-Age=604800`;return Response.json({ok:true},{headers});}return Response.json(result,{headers});}catch(e){const msg=e instanceof Error?e.message:'Åtgärden misslyckades';return Response.json({error:msg.includes('UNIQUE')?'Åtgärden har redan hanterats. Uppdatera sidan.':(msg.includes('insufficient')||msg.includes('nonnegative_money'))?'Det tillgängliga beloppet räcker inte.':msg.includes('D1_')?'Kunde inte spara. Försök igen.':msg},{status:400,headers:{'Cache-Control':'no-store'}})}
+}

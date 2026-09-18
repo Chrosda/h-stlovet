@@ -1,0 +1,8 @@
+export const templates = [
+ {id:'walk',name:'Lövrundan',category:'Rörelse',amount:30,description:'Ta en promenad på ungefär 3 km. Välj en runda som passar dig och upptäck hösten längs vägen.',short:'En promenad, frisk luft och nya upptäckter.',time:'Cirka 45 min',reward:'En glasspaus',color:'orange',icon:'footprints'},
+ {id:'read',name:'Läsmyset',category:'Läsning',amount:50,description:'Läs, lyssna eller högläs i 25 minuter. En bok, en serietidning eller en ljudbok – du väljer!',short:'Hitta en skön plats och försvinn in i en bok.',time:'25 min',reward:'En god fikastund',color:'purple',icon:'book'},
+ {id:'train',name:'Träningsveckan',category:'Träning',amount:70,description:'Gå på dagens träning. Varje träning läggs upp som ett eget uppdrag av din vuxen.',short:'Dagens träning. Din grej, i ditt tempo.',time:'Ett träningspass',reward:'Ett gott mellanmål',color:'blue',icon:'ball'},
+ {id:'forest',name:'Ut i skogen',category:'Rörelse',amount:50,description:'Ta en skogspromenad och hitta tre hösttecken. Berätta vad du upptäckte för din vuxen.',short:'Ge dig ut och hitta tre tecken på höst.',time:'Cirka 30 min',reward:'En fikapaus',color:'lime',icon:'leaf'},
+ {id:'play',name:'Spelhänget',category:'Tillsammans',amount:300,description:'Bjud över en kompis och spela något tillsammans. Brädspel, kortspel eller något ni hittar på själva.',short:'Samla en kompis. Dags för en spelstund.',time:'En eftermiddag',reward:'Något kul tillsammans',color:'pink',icon:'game'}
+];
+export const statusLabel:Record<string,string>={Assigned:'Att göra',Claimed:'Väntar på godkännande',Approved:'Godkänd',Issuing:'Belöning på väg',Delivered:'Levererad · test',Rejected:'Prova igen',Failed:'Leveransfel',ManualReview:'Hanteras av support'};

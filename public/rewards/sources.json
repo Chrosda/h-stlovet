@@ -1,0 +1,15 @@
+{
+  "source": "https://mobilapresentkort.se/",
+  "retrieved": "2026-09-11",
+  "note": "Product images used as reward proposals in mock environment. No confirmed bundled product or redemption promise.",
+  "images": {
+    "froosh": "https://mobilapresentkort.se/sites/default/files/styles/large/public/2020-09/frosh.png?itok=zWqHc_76",
+    "bulle": "https://mobilapresentkort.se/sites/default/files/styles/large/public/2025-08/bullefika.png?itok=5PaFisSG",
+    "glass": "https://mobilapresentkort.se/sites/default/files/styles/large/public/2026-01/MICC-GB2507-GB-Swish-ClearOn_Produktbild-2-500x500.png?itok=V2GIbfrE",
+    "spel": "https://mobilapresentkort.se/sites/default/files/styles/large/public/2026-03/spel%20200kr.png?itok=c3D54rD3",
+    "fika": "https://mobilapresentkort.se/sites/default/files/styles/large/public/2026-05/Fika%2040%20kr.png?itok=RLbKqihj"
+  },
+  "edits": {
+    "bulle-only.png": "AI-assisted extraction of cinnamon bun from bullefika.png; coffee cup removed. Illustrative mock reward."
+  }
+}
