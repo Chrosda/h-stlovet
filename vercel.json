@@ -1,0 +1,24 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "installCommand": "npm ci --include=dev --include=optional",
+  "buildCommand": "npm run build:demo",
+  "outputDirectory": "dist-demo",
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/start", "destination": "/index.html" },
+    { "source": "/om", "destination": "/index.html" },
+    { "source": "/barn/demo", "destination": "/index.html" },
+    { "source": "/barn", "destination": "/index.html" },
+    { "source": "/admin", "destination": "/index.html" },
+    { "source": "/signin-with-chatgpt", "destination": "/index.html" },
+    { "source": "/signout-with-chatgpt", "destination": "/index.html" }
+  ],
+  "headers": [
+    { "source": "/(.*)", "headers": [
+      { "key": "X-Content-Type-Options", "value": "nosniff" },
+      { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+    ] },
+    { "source": "/sw.js", "headers": [{ "key": "Cache-Control", "value": "no-cache" }] }
+  ]
+}
