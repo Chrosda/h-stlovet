@@ -1,6 +1,7 @@
 import { createRoot } from "react-dom/client";
 import { ArrowRight, BookOpen, Leaf, UsersRound } from "lucide-react";
 import ChildExperience from "../app/child-experience";
+import {BrandFooter, WelcomeHero} from "../app/brand";
 import "../app/globals.css";
 import "./public-demo.css";
 
@@ -27,16 +28,7 @@ function PublicSite() {
     <div className="demo-ribbon">Publik demo · inga konton, betalningar, presentkort eller SMS.</div>
     <main className="container" id="main">
       {landing ? <>
-        <section className="public-hero">
-          <div>
-            <p className="eyebrow">För små och stora loväventyrare · 8–14 år</p>
-            <h1>Mindre tjat.<br />Mer läsning,<br />rörelse och kul.</h1>
-            <p>En bra bok, en ny stig eller en stund med en kompis. Upptäck hur roliga uppdrag och små belöningar kan göra plats för ett höstlov att minnas.</p>
-            <DemoLink />
-            <p className="small">Prova med Sams exempeluppdrag. Inget konto behövs.</p>
-          </div>
-          <img src="/autumn.webp" alt="Två barn på upptäcktsfärd i höstskogen" width="900" height="900" />
-        </section>
+        <WelcomeHero publicDemo />
         <section className="public-steps" aria-labelledby="steps-heading">
           <h2 id="steps-heading">Så är Höstlovet tänkt att fungera</h2>
           <div className="steps">
@@ -58,7 +50,7 @@ function PublicSite() {
         <p>Konton, personliga barnlänkar och administration ingår inte i den publika demon. Här kan du i stället prova barnets vy med exempeldata.</p>
         <DemoLink /><p><a className="textlink" href="/">Till startsidan</a></p>
       </section>}
-      <footer className="footer"><a className="brand" href="/">höstlovet.se</a><span>Ett höstlov med lite mer av det som känns bra.</span><a className="textlink" href="/om">Om demon och dina uppgifter</a></footer>
+      <BrandFooter />
     </main>
   </div>;
 }
